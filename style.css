@@ -1,4 +1,14 @@
-.container {
+@font-face {
+    font-family: 'Noto Color Emoji';
+    src: url('https://fonts.gstatic.com/s/notoemoji/13.0.1/emoji_u1f43b.woff2') format('woff2');
+    unicode-range: U+1F43B; /* Only load the font for the bear emoji character */
+  }
+  
+  body {
+    font-family: sans-serif;
+  }
+  
+  .container {
     text-align: center;
     margin-top: 50px;
   }
@@ -8,6 +18,5 @@
     margin-top: 30px;
     margin-bottom: 50px;
     font-family: 'Noto Color Emoji', sans-serif;
-
   }
   
