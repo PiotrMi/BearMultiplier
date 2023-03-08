@@ -10,7 +10,7 @@ function generateEmoji() {
     const emojiOutput = document.querySelector('.emoji-output');
     const emojiString = emojiOutput.textContent;
     navigator.clipboard.writeText(emojiString).then(() => {
-      alert(`Copied ${emojiString} to clipboard!`);
+      console.log(`Copied ${emojiString} to clipboard!`);
     });
   }
   
