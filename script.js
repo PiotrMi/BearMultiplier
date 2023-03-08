@@ -6,5 +6,15 @@ function generateEmoji() {
     emojiOutput.textContent = bearEmojis;
   }
   
+  function copyEmoji() {
+    const emojiOutput = document.querySelector('.emoji-output');
+    const emojiString = emojiOutput.textContent;
+    navigator.clipboard.writeText(emojiString).then(() => {
+      alert(`Copied ${emojiString} to clipboard!`);
+    });
+  }
+  
+  document.querySelector('.generate-button').addEventListener('click', generateEmoji);
+  document.querySelector('.copy-button').addEventListener('click', copyEmoji);
   window.addEventListener('load', generateEmoji);
   
