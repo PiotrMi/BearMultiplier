@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bear Emoji Generator</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Bear Emoji Generator</h1>
-
-  <div id="emoji-container"></div>
-
-  <div class="button-container">
-    <button id="generate-button">Generate</button>
-    <button id="small-button">1-5</button>
-    <button id="medium-button">5-20</button>
-    <button id="large-button">20-100</button>
-    <button id="copy-button">Copy Bear Emoji</button>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bear Emoji Generator</title>
+    <script>
+      function generateBearEmojis() {
+        // generate a random number between 1 and 20
+        const numBearEmojis = Math.floor(Math.random() * 20) + 1;
+        // create a string of bear emojis
+        const bearEmojis = '🐻'.repeat(numBearEmojis);
+        // copy the string to the clipboard
+        navigator.clipboard.writeText(bearEmojis);
+        // display the string on the webpage
+        document.getElementById('bear-emojis').textContent = bearEmojis;
+      }
+    </script>
+    <style>
+      body {
+        font-size: 2rem;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      button {
+        font-size: 1.5rem;
+        padding: 1rem;
+        margin-top: 2rem;
+      }
+      #bear-emojis {
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bear Emoji Generator</h1>
+    <button onclick="generateBearEmojis()">Generate Bear Emojis</button>
+    <p id="bear-emojis"></p>
+  </body>
 </html>
