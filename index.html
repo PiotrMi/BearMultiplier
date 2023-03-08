@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bear Emoji Generator</title>
-    <script>
-      function generateBearEmojis() {
-        // generate a random number between 1 and 20
-        const numBearEmojis = Math.floor(Math.random() * 20) + 1;
-        // create a string of bear emojis
-        const bearEmojis = '🐻'.repeat(numBearEmojis);
-        // copy the string to the clipboard
-        navigator.clipboard.writeText(bearEmojis);
-        // display the string on the webpage
-        document.getElementById('bear-emojis').textContent = bearEmojis;
-      }
-    </script>
     <style>
-      body {
-        font-size: 2rem;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-      }
-      button {
-        font-size: 1.5rem;
-        padding: 1rem;
-        margin-top: 2rem;
-      }
-      #bear-emojis {
-        margin-top: 2rem;
-      }
+        body {
+            font-size: 2rem;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f6f6;
+        }
+
+        button {
+            font-size: 1.5rem;
+            padding: 1rem;
+            margin-top: 2rem;
+            background-color: #25d366;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px #888;
+        }
+
+        #bear-emojis {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px #888;
+            display: inline-block;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body onload="generateBearEmojis(false)">
     <h1>Bear Emoji Generator</h1>
-    <button onclick="generateBearEmojis()">Generate Bear Emojis</button>
+    <button onclick="generateBearEmojis(true)">Generate Bear Emojis</button>
     <p id="bear-emojis"></p>
-  </body>
+    <script>
+        function generateBearEmojis(writeToClipboard) {
+            // generate a random number between 1 and 20
+            const numBearEmojis = Math.floor(Math.random() * 20) + 1;
+            // create a string of bear emojis
+            const bearEmojis = '🐻'.repeat(numBearEmojis);
+            // copy the string to the clipboard
+            if (writeToClipboard == true)
+                navigator.clipboard.writeText(bearEmojis);
+            // display the string on the webpage
+            document.getElementById('bear-emojis').innerHTML = bearEmojis.replace(/🐻/g, '<img src="https://em-content.zobj.net/thumbs/160/whatsapp/116/bear-face_1f43b.png" alt="🐻" class="whatsapp-emoji">');
+        }
+    </script>
+</body>
+
 </html>
