@@ -7,12 +7,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <h1>Bear Emoji Generator</h1>
+  </header>
   <div class="container">
+    <div class="emoji-output"></div>
     <div class="button-container">
-      <button class="generate-button">Generate Bear Emoji</button>
+      <button class="generate-button" data-min="1" data-max="10">Generate Bear Emoji</button>
+      <button class="generate-button" data-min="1" data-max="5">1-5 Bear Emojis</button>
+      <button class="generate-button" data-min="5" data-max="20">5-20 Bear Emojis</button>
+      <button class="generate-button" data-min="20" data-max="100">20-100 Bear Emojis</button>
       <button class="copy-button">Copy Bear Emoji</button>
     </div>
-    <div class="emoji-output"></div>
   </div>
   <script src="script.js"></script>
 </body>
