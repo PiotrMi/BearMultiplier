@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bear Emoji Generator</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Bear Emoji Generator</h1>
-  </header>
-  <div class="container">
-    <div class="emoji-output"></div>
-    <div class="button-container">
-      <button class="generate-button" data-min="1" data-max="10">Generate Bear Emoji</button>
-      <button class="generate-button" data-min="1" data-max="5">1-5 Bear Emojis</button>
-      <button class="generate-button" data-min="5" data-max="20">5-20 Bear Emojis</button>
-      <button class="generate-button" data-min="20" data-max="100">20-100 Bear Emojis</button>
-      <button class="copy-button">Copy Bear Emoji</button>
-    </div>
+  <h1>Bear Emoji Generator</h1>
+
+  <div id="emoji-container"></div>
+
+  <div class="button-container">
+    <button id="generate-button">Generate</button>
+    <button id="small-button">1-5</button>
+    <button id="medium-button">5-20</button>
+    <button id="large-button">20-100</button>
+    <button id="copy-button">Copy Bear Emoji</button>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
